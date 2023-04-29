@@ -108,6 +108,11 @@
                     <div data-i18n="Without menu">Add Income Category</div>
                   </a>
                 </li>
+                <li class="menu-item">
+                  <a href="{{ route('all.income.category') }}" class="menu-link">
+                    <div data-i18n="Without menu">All Income Category</div>
+                  </a>
+                </li>
               </ul>
             </li>
           </ul>

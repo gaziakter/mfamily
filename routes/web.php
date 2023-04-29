@@ -25,6 +25,8 @@ Route::get('/dashboard', function () {
 
 Route::controller(IncomeCategoryController::class)->group(function () {
     Route::get('/add/income/category', 'AddIncomeCagetory')->name('add.income.category');
+    Route::post('/store/income/category', 'StoreIncomeCagetory')->name('store.income.category');
+    Route::get('/All/income/category', 'AllIncomeCagetory')->name('all.income.category');
 });
 
 
