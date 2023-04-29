@@ -29,6 +29,7 @@ Route::controller(IncomeCategoryController::class)->group(function () {
     Route::get('/All/income/category', 'AllIncomeCagetory')->name('all.income.category');
     Route::get('/edit/income/category/{id}', 'EditIncomeCagetory')->name('edit.income.category');
     Route::post('/update/income/category', 'UpdateIncomeCagetory')->name('update.income.category');
+    Route::get('/delete/income/category/{id}', 'DeleteIncomeCagetory')->name('delete.income.category');
 });
 
 

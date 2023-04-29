@@ -26,7 +26,7 @@ All Income Category - mFamily app
                 <td>{{ $item->name }}</td>
                 <td>
                     <a href="{{ route('edit.income.category', $item->id) }}" class="btn btn-info sm" title="Edit Data"><i class="fas fa-edit"></i>Edit</a>
-                    <a href="" class="btn btn-danger sm" title="Delete Data" id="delete"><i class="fas fa-trash-alt"></i>Delete</a>
+                    <a href="{{ route('delete.income.category', $item->id) }}" class="btn btn-danger sm" title="Delete Data" id="delete"><i class="fas fa-trash-alt"></i>Delete</a>
                 </td>
             </tr>
             @endforeach

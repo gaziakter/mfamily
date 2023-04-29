@@ -50,7 +50,12 @@ class IncomeCategoryController extends Controller
             'updated_by' => Auth::user()->id,
             'updated_at' => Carbon::now(),
         ]);
-        return redirect()->route('all.income.category')->with('message', 'Income Updated successfully!');
+        return redirect()->route('all.income.category')->with('message', 'Income category Updated successfully!');
+    }
+
+    public function DeleteIncomeCagetory($id){
+        IncomeCategory::findOrFail($id)->delete();
+        return redirect()->route('all.income.category')->with('message', 'Deleted income category successfully');
     }
 
 }
