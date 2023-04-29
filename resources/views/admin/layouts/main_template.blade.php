@@ -213,7 +213,7 @@
                       <div class="dropdown-divider"></div>
                     </li>
                     <li>
-                      <a class="dropdown-item" href="auth-login-basic.html">
+                      <a class="dropdown-item" href="#">
                         <i class="bx bx-power-off me-2"></i>
                         <span class="align-middle">Log Out</span>
                       </a>
@@ -261,8 +261,6 @@
                 </div>
                 <div>
                   <a href="#" class="footer-link me-4" target="_blank">License</a>
-                  <a href="#" target="_blank" class="footer-link me-4">More Themes</a>
-
                   <a
                     href="#"
                     target="_blank"

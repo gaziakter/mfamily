@@ -33,4 +33,24 @@ class IncomeCategoryController extends Controller
         return view('admin.income.all_income_category', compact('categories'));
     }
 
+    public function EditIncomeCagetory($id){
+        $categories = IncomeCategory::findOrFail($id);
+        return view('admin.income.edit_income_category', compact('categories'));
+
+    }
+
+    public function UpdateIncomeCagetory(Request $request){
+        $category_id = $request->id;
+
+        $request->validate([
+            'name' => 'required|unique:income_categories|max:255'
+        ]);
+        IncomeCategory::findOrFail($category_id)->update([
+            'name' => $request->name,
+            'updated_by' => Auth::user()->id,
+            'updated_at' => Carbon::now(),
+        ]);
+        return redirect()->route('all.income.category')->with('message', 'Income Updated successfully!');
+    }
+
 }
